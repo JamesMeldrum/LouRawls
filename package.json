@@ -1,0 +1,25 @@
+{
+  "name": "LouRawls",
+  "version": "0.0.0",
+  "description": "Event router for light-weight JS projects based on AOP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JamesMeldrum/LouRawls.git"
+  },
+  "keywords": [
+    "AOP",
+    "Event",
+    "Lou",
+    "Rawls",
+    "LouRawls"
+  ],
+  "author": "James Meldrum",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/JamesMeldrum/LouRawls/issues"
+  }
+}

@@ -24,3 +24,7 @@ further exposes the quirks of JavaScript as strengths for the developer.
 ( 9/30/2013 )
 * 0.0.2 - Stable. Generate documentation - UNRELEASED
 ( XX/XX/XXXX )
+
+### Dedication
+
+Dedicated to the life work of soul singer Lou Rawls (http://en.wikipedia.org/wiki/Lou_Rawls).

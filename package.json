@@ -1,25 +1,43 @@
 {
   "name": "LouRawls",
+  "description": "The best project ever.",
   "version": "0.0.0",
-  "description": "Event router for light-weight JS projects based on AOP.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/JamesMeldrum/LouRawls",
+  "author": {
+    "name": "James Meldrum",
+    "email": "jrm.general@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/JamesMeldrum/LouRawls.git"
   },
-  "keywords": [
-    "AOP",
-    "Event",
-    "Lou",
-    "Rawls",
-    "LouRawls"
-  ],
-  "author": "James Meldrum",
-  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/JamesMeldrum/LouRawls/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/JamesMeldrum/LouRawls/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "LouRawls.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "~1.2.4"
+  },
+  "keywords": [],
+  "dependencies": {
+    "backbone": "~1.0.0",
+    "grunt-contrib-less": "~0.7.0"
   }
 }

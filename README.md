@@ -1,30 +1,82 @@
-LouRawls
-========
+# LouRawls
 
 Event router for light-weight JS projects based on AOP.
 
-Currently in active development.
-Currently NOT seeking users.
+Currently in active development. 
+Currently NOT seeking users. 
 Currently PASSING unit tests.
 
-### Features
+## Getting Started
+- Install the module with: `npm install LouRawls`
+- Create the Aspect, Router and Routes
+```javascript
+var LouRawls = require('LouRawls');
+var AspectDefinition = LouRawls.Aspect.extend({ // TODO: This needs to be called AspectDefinition
+var AspectDefinition = new LouRawls.AspectDefinition({ // TODO: This needs to be called AspectDefinition
+    aspectOne   : new LouRawls.Aspect(function(){
+      // Aspect functionality
+      // Can be passed arguments from the router, function interfaces
+      //  dont do argument checking, up to the aspect implementer
+    }),
+    aspectTwo   : function(){},
+    aspectThree : function(){}
+});
 
-LouRawls plans to distinguish itself from other frameworks by focusing on AOP
-and making Events first class citizens in app writing. By utilising Aspects
-explicitly at application creation, the programmer can leverage JavaScript's
-prototypical inheritence and share command and control functions between
-aspects. The treatment of Events as first class citizens in the language
-further exposes the quirks of JavaScript as strengths for the developer.
+var Router = LouRawls.Router.extend({
 
-### Release schedule
+  routes : {
+    // Format
+    // Preserving STUPID backbone syntax
+    'list*' : 'list'
+    '' : 'home'
+    '*actions' : 'home'
 
-* 0.0.0 - Dev Unstable. Yolo: we're not ready. - RELEASED 
-( 8/30/2013 )
-* 0.0.1 - Dev Stable. Handle generic requests - UNRELEASED 
-( 9/30/2013 )
-* 0.0.2 - Stable. Generate documentation - UNRELEASED
-( XX/XX/XXXX )
+  },
 
-### Dedication
+  events : {
+    'DOMReady' : { // Event - string
+      list : new LouRawls.AspectMap({
+        aspects : ['aspectOne','aspectTwo',aspectThree'], // Aspects the route is subscribed to in order
+        executionModel : 'synch' || 'asynch',
+        callback : undefined // To be called when all events finish
+        options : {} // Hash of options passed to the aspects
+      })
+    }
+  },
+  aspect : AspectDefinition // Pass the aspect object along
 
-Dedicated to the life work of soul singer Lou Rawls (http://en.wikipedia.org/wiki/Lou_Rawls).
+});
+
+// Instaniate new router
+// Routing table taken as args
+  // Takes 'routes', key being hash of events supported
+    // Hash of events are themselves hashes of aspects
+    
+
+
+// The Aspect Routes Events to Aspects
+
+var Aspect = new LouRawls.Aspect({
+  DOMLoaded : new Aspect   
+});
+
+
+var router = new Router();
+router.start();
+```
+
+## Documentation
+_(Coming soon)_
+
+## Examples
+_(Coming soon)_
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2013 James Meldrum  
+Licensed under the MIT license.

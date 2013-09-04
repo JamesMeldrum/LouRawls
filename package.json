@@ -1,6 +1,6 @@
 {
-  "name": "LouRawls",
-  "description": "The best project ever.",
+  "name": "lourawls",
+  "description": "Event router for light-weight JS projects based on AOP.",
   "version": "0.0.1",
   "homepage": "https://github.com/JamesMeldrum/LouRawls",
   "author": {

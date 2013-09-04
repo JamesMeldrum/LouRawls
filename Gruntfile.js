@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       },
       lib: {
         files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit', 'browserify:LouRawls', 'browserify:Client']
+        tasks: ['browserify:LouRawls', 'browserify:Client']
       },
       test: {
         files: '<%= jshint.test.src %>',

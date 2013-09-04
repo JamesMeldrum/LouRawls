@@ -1,7 +1,7 @@
 {
   "name": "LouRawls",
   "description": "The best project ever.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/JamesMeldrum/LouRawls",
   "author": {
     "name": "James Meldrum",
@@ -38,6 +38,6 @@
   "keywords": [],
   "dependencies": {
     "backbone": "~1.0.0",
-    "grunt-contrib-less": "~0.7.0"
+    "jquery-browserify": "~1.8.1"
   }
 }

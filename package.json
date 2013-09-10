@@ -1,7 +1,7 @@
 {
   "name": "lourawls",
   "description": "Event router for light-weight JS projects based on AOP.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/JamesMeldrum/LouRawls",
   "author": {
     "name": "James Meldrum",
@@ -20,7 +20,7 @@
       "url": "https://github.com/JamesMeldrum/LouRawls/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "LouRawls.js",
+  "main": "/bin/index.js",
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -38,6 +38,6 @@
   "keywords": [],
   "dependencies": {
     "backbone": "~1.0.0",
-    "jquery-browserify": "~1.8.1"
+    "jquery": "~1.8.1"
   }
 }

@@ -23,7 +23,7 @@ into less, sass and templates.
 
 ### In The Browser
 
-Include /bin/index.js before referencing it in the browser, LouRawls will be available in the
+Include /bin/index.min.js before referencing it in the browser, LouRawls will be available in the
 global n/s.
 
 If using within a Node environment, it will be treated as an NPM package.
@@ -47,6 +47,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
   * Added debug mode
   * Added multiple router triggers
   * Added Documentation
+  * Added minified build (105k, will improve, promise)
 
 ## License
 Copyright (c) 2013 James Meldrum  

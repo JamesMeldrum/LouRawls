@@ -52,6 +52,13 @@ module.exports = function(grunt) {
         tasks: ['jshint:test', 'nodeunit']
       },
     },
+    uglify : {
+      min : {
+        files : {
+          'bin/index.min.js' : [ 'bin/index.js' ]
+        }
+      }
+    }
   });
 
   // These plugins provide necessary tasks.
@@ -60,6 +67,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit']);

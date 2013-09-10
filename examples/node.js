@@ -1,25 +1,4 @@
-'use strict';
-
-var LouRawls = require('../bin/LouRawls.js');
-
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
+var LouRawls = require( 'lourawls' );
 
 var aspectDefinition = new LouRawls.AspectDefinition({
   aspectOne : new LouRawls.Aspect( function( eventType, route, eventOptions, splatOptions, aspectMap  ){
@@ -73,18 +52,3 @@ var router = new LouRawls.Router({
 });
 
 router.start(); // Bind listeners, call aspects on events
-
-*/
-
-exports['Router'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(LouRawls.Router, undefined, 'should be undefined.');
-    test.done();
-  },
-};
